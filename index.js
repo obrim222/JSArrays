@@ -28,11 +28,17 @@ const getUserlist = function () {
 };
 
 function insert() {
-  firstname.push(firstNameInput.value);
-  lastnames.push(LastNameInput.value);
-  ages.push(AgeInput.value);
-
-  insert2();
+  
+  var firstName = document.getElementById('fn-box').value;
+  var lastName = document.getElementById('ln-box').value;
+  var age = document.getElementById('age-box').value;
+  console.log("FirstName:", firstName, "LastName:", lastName, "Age:", age);
+  //create User Object
+  let person = {firstname: firstName, lastname: lastName, age: age};
+  userList.push(person);
+  console.log(userList);
+  //insert2();
+  alert("Welcome: " + firstName + " there are " + userList.length + " users connected !");
 }
 
 function insert2() {
