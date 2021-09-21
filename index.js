@@ -22,9 +22,14 @@ var AgeInput = document.getElementById("age-box");
 var messageBox = document.getElementById("display");
 
 const getUserlist = function () {
-  for (let i = 0; i < userList.length; i++) {
-    console.log(userList[i]);
+  for(let i =0; i < userList.length; i++) {
+    document.getElementById("tableBody").insertAdjacentHTML("beforeend","<tr><td>"+userList[i].firstname+"</td><td>"+userList[i].lastname+"</td><td>"+userList[i].age+"</td></tr>");
   }
+};
+
+const welcomeMessage = function () {
+  let i = userList.length-1;
+  document.getElementById("table").insertAdjacentHTML("afterend","<div id='message'><p> Welcome "+userList[i].firstname+" "+userList[i].lastname+" ,we are happy that you are here !! </p></div>");
 };
 
 function insert() {
@@ -39,6 +44,8 @@ function insert() {
   console.log(userList);
   //insert2();
   alert("Welcome: " + firstName + " there are " + userList.length + " users connected !");
+  getUserlist();
+  welcomeMessage();
 }
 
 function insert2() {
