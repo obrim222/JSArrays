@@ -11,8 +11,6 @@ let userList = [
   },
 ];
 
-var messageBox = document.getElementById("display");
-
 const getUserlist = function () {
   for (let i = 0; i < userList.length; i++) {
     document
@@ -65,7 +63,7 @@ function insert() {
   let person = { firstname: firstName, lastname: lastName, age: age };
   userList.push(person);
   console.log(userList);
-  //insert2();
+
   alert(
     "Welcome: " +
       firstName +
