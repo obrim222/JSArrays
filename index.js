@@ -11,14 +11,6 @@ let userList = [
   },
 ];
 
-var firstname = [];
-var lastnames = [];
-var ages = [];
-
-var firstNameInput = document.getElementById("fn-box");
-var LastNameInput = document.getElementById("ln-box");
-var AgeInput = document.getElementById("age-box");
-
 var messageBox = document.getElementById("display");
 
 const getUserlist = function () {
